@@ -5,7 +5,7 @@
 # into more complex scripts such as allowing the next stage to be run automatically...
 
 #  Runs  gmx energy with parameter 9 (potential)
-echo "9" | gmx energy -f C8mim_Mixture_EM.edr -o energy_test.xvg
+echo "10" | gmx energy -f C8mim_Mixture_EM.edr -o energy_test.xvg
 # finds everything from the start of the columns to the end of file and  writes it to file 'grepEnergy.txt'
 sed -n '/0.000000/,$p' energy_test.xvg > grepEnergy.txt
 python energyConverged.py 
